@@ -4,8 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    
+
+<header>
+    <input type="text" id="busca" placeholder="pesquisar por titulo">
+</header>
+
+<main>
+    <section id="tarefas">
+        <h2>Tarefas <button onclick="novaTarefa()">Nova tarefa</button></h2>
+        <h6>Nenhuma tarefa registrada</h6>
+    </section>
+
+    <section id="overlay" onclick="fecharModal()"></section>
+
+    <div id="criarTarefa" class="modal">
+        <h3>Criar tarefa <i class='bx bxs-x-circle' size="md" onclick="fecharModal()"></i></h3>
+        <form>
+            <label for="titulo">Titulo</label>
+            <input type="text" id="titulo">
+            <label for="descricao">Descrição</label>
+            <textarea id="descricao"></textarea>
+            <button>Criar</button>
+        </form>
+    </div>
+
+</main>
+    <script src="script.js"></script>
 </body>
 </html>
