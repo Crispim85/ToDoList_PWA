@@ -62,17 +62,14 @@ function deletarTarefa(id) {
 
 function pesquisarTarefa() {
     let lis = document.querySelectorAll("ul li")
-    if (busca.value.length > 0) {
+    const termoBusca = busca.value.toLowerCase()
         lis.forEach(li => {
-            if (!li.children[0].innerText.includes(busca.value)) {
-                li.classList.add('oculto')
-            } else {
+            const titulo = li.querySelector("h5").innerText.toLowerCase()
+            const descricao = li.querySelector("p").innerText.toLowerCase()
+            if (titulo.includes(termoBusca) || descricao.includes(termoBusca)) {
                 li.classList.remove('oculto')
+            } else {
+                li.classList.add('oculto')
             }
         })
-    } else {
-        lis.forEach(li => {
-            li.classList.remove('oculto')
-        })
     }
-}
