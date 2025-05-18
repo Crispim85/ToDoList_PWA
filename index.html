@@ -24,11 +24,11 @@
 
     <div id="criarTarefa" class="modal">
         <h3>Criar tarefa <i class='bx bxs-x-circle' size="md" onclick="fecharModal()"></i></h3>
-        <form>
+        <form onsubmit="addTarefa()">
             <label for="titulo">Titulo</label>
-            <input type="text" id="titulo">
+            <input type="text" id="titulo" required>
             <label for="descricao">Descrição</label>
-            <textarea id="descricao"></textarea>
+            <textarea id="descricao" required></textarea>
             <button>Criar</button>
         </form>
     </div>

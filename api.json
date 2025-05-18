@@ -1,8 +1,7 @@
 {
     "tarefas": [
         {
-            "titulo": "Tarefa 1",
-            "descricao": "fazer tal coisa"
+            "titulo": []
         }
     ]
 }
