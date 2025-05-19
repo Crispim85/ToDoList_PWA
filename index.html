@@ -8,7 +8,6 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#007bff">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
 </head>
@@ -27,13 +26,15 @@
     <section id="overlay" onclick="fecharModal()"></section>
 
     <div id="criarTarefa" class="modal">
-        <h3>Criar tarefa <i class='bx bxs-x-circle' size="md" onclick="fecharModal()"></i></h3>
-        <form onsubmit="addTarefa()">
-            <label for="titulo">Titulo</label>
-            <input type="text" id="titulo" required>
+        <h3 id="modal-title">Criar tarefa 
+        <i class='bx bxs-x-circle' role="button" aria-label="Fechar modal" onclick="fecharModal()"></i>
+        </h3>
+        <form onsubmit="addTarefa(event)" aria-labelledby="modal-title">
+            <label for="titulo">Título</label>
+            <input type="text" id="titulo" name="titulo" required>
             <label for="descricao">Descrição</label>
-            <textarea id="descricao"></textarea>
-            <button>Criar</button>
+            <textarea id="descricao" name="descricao"></textarea>
+            <button type="submit">Criar</button>
         </form>
     </div>
 

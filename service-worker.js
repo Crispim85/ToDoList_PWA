@@ -2,9 +2,10 @@ const CACHE_NAME = 'app-cache-v1';
 const FILES_TO_CACHE = [
   '/',
   '/index.html',
-  '/style.css',
-  '/app.js',
-  '/icon.png',
+  '/styles.css',
+  '/script.js',
+  '/icon-192.png',
+  '/icon-512.png',
   '/manifest.json',
 ];
 

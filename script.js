@@ -27,7 +27,7 @@ function fecharModal() {
     criarTarefa.classList.remove("active");
 }
 
-function addTarefa() {
+function addTarefa(event) {
     event.preventDefault();
     const tituloValor = titulo.value.trim();
     const descricaoValor = descricao.value.trim();
