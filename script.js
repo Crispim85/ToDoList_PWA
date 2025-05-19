@@ -1,4 +1,8 @@
-// script.js - versão PWA com IndexedDB
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js")
+    .then(() => console.log("Service Worker registrado com sucesso."))
+    .catch((error) => console.log("Falha ao registrar Service Worker:", error));
+}
 
 let db;
 const request = indexedDB.open("tarefasDB", 1);
